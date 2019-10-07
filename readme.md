@@ -2,122 +2,26 @@
 
 ## Описание
 
+## Требования
+
+Для
+* Visual Studio 2019
+* Visual Studio Code
+
 ## Выполнение
 
-### Шаг 1
-
-Работа с записями, использовать память, List<T>
-
-#### Команда create
-
-```
-> create
-First name: ...
-Last name: ...
-Date of birth: ...
-Record #1 is created.
-```
-
-#### Команда list
-
-```
-> list
-#1, John, Doe
-#2, Stan, Smith
-```
-
-#### Команда stat
-
-```
-> stat
-3 records.
-```
-
-
-### Шаг 2
-
-#### Команда find
-
-```
-> find firstname "John"
-#1
-#2
-```
-
-#### Команда edit
-
-```
-> edit #1
-First name: ...
-Last name: ...
-Date of birth: ...
-```
-
-
-### Шаг 3 - 
-
-#### Команда export csv
-
-```
-> export csv
-```
-
-
-#### Команда export xml
-
-```
-> export csv
-```
-
-### Шаг 4 -
-
-Добавление файловой системы
-
-
-### Шаг 5
-
-#### Расширение команды find
-
-```
-> find firstname "John", lastname "Doe"
-#1
-#2
-```
-
-#### Расширение команды list
-
-```
-> list id, firstname, lastname
-#1, John, Doe
-#2, Stan, Smith
-```
-
-### Шаг 6 -
-
-Добавление in memory таблиц индексов.
-
-
-### Шаг 7
-
-#### Команда import csv
-
-```
-import csv filename.csv
-```
-
-### Команда import xml
-
-```
-import xml filename.xml
-```
-
-### Шаг 8
-
-#### Команда remove
-
-```
-> remove #1
-Record #1 is removed.
-```
-
-#### Команда purge
+1. [Создание консольного приложения FileCabinetApp](step01.md)
+2. [Создание сервиса FileCabinetService](step02.md)
+3. [Редактирование и валидация данных](step03.md)
+4. [Поиск](step04.md)
+5. [Рефакторинг](step05.md)
+6. [Экспорт в CSV и XML](step06.md)
+7. [Хранилище на файловой системе](step07.md)
+8. [Импорт из CSV и XML](step08.md)
+9. [Удаление записей](step09.md)
+10. [Рефакторинг](step10.md)
+11. [Журналировавние](step11.md)
+12. [Двоичное дерево](step12.md)
+13. [yield](step13.md)
+14. [Расширение команды](step14.md)
+15. [Расширение команды](step15.md)

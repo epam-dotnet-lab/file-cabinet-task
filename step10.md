@@ -57,14 +57,54 @@
 * В классах-обработчиках вызывайте делегат для печати списка записей.
 
 
-#### 
+#### Рефакторинг структуры классов
 
+Код валидации параметров записи, который используется при создании и редактировании, сосредоточен в двух классах - _DefaultValidator_ и _CustomValidator_, которые реализуют _IRecordValidator_. Эти классы не имеют общего кода, однако выполняют одну и ту же функцию - проверяют входные параметры. Цель рефакторинга - сделать код валидации гибким и легко настраиваемым.
 
+1. Примените технику [Extract Method](https://refactoring.guru/ru/extract-method) для кода валидации параметров:
+
+![Extract validation methods](images/step10-validation-extract-methods.png)
+
+2. Примените технику [Extract Class](https://refactoring.guru/ru/extract-class) и реализуйте _IRecordValidator_:
+
+![Extract validation classes](images/step10-validation-extract-classes.png)
+
+3. Классы _DefaultFirstNameValidator_ и _CustomFirstNameValidator_ (и другие аналогичные пары классов) имеют одинаковый код и отличаются только критериями валидации. Код можно обобщить, а критерии превратить в параметры. Это похоже на технику [Parameterize Method](https://refactoring.guru/ru/parameterize-method), однако параметрами будут поля объекта.
+
+![Parametrize classes](images/step10-validation-parametrize-classes.png)
+
+4. Классы _DefaultValidator_ и _CustomValidator_ обладают похожей структурой - они владеют списком валидаторов и единообразно используют критерии валидации.
+
+Примените [Composite Pattern](https://refactoring.guru/ru/design-patterns/composite):
+
+![Use Composite Pattern as validator](images/step10-validation-composite.png)
+
+Теперь критерии валидации легко настраивать и изменять.
+
+5. Чтобы более гибко настраивать критерии валидации, замените классы _DefaultValidator_ и _CustomValidator_ на [Builder Fluent Interface](https://medium.com/@sawomirkowalski/design-patterns-builder-fluent-interface-and-classic-builder-d16ad3e98f6c).
+
+![Use Fluent Builder to create validator](images/step10-validation-fluent-builder.png)
+
+Пример использования _ValidatorBuilder_:
+
+```cs
+var validator = new ValidatorBuilder()
+    .ValidateFirstName(min, max)
+    .ValidateLastName(min, max)
+    .ValidateDateOfBirth(from, to)
+    .Create();
+```
+
+6. Создайте extension methods для _ValidatorBuilder_, которые будут создавать валидаторы для наборов правил "default" и "custom".
+
+Пример использования:
+
+```cs
+var defaultValidator = new ValidatorBuilder().CreateDefault();
+var customValidator = new ValidatorBuilder().CreateCustom();
+```
 
 
 #### Качество кода
 
-1. 
-
-1. Проверьте качество кода и скорректируйте код, используя руководство из шага 5.
-
+Проверьте качество кода, исправьте стилистические и другие ошибки. См. раздел "Качество кода" из шага 5.

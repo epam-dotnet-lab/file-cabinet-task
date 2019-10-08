@@ -21,6 +21,8 @@ Visual Studio 2019 - это наиболее удобный инструмент
 * Навыки работы с [Git](https://git-scm.com/book/ru/v2).
 * Английский язык для чтения документации.
 
+Перед началом работы при использовании Visual Studio следует изучить основы отладки в этой IDE - [Debugging .NET Applications](https://github.com/epam-dotnet-lab/tasks/tree/version1/debugging).
+
 
 ## Выполнение
 

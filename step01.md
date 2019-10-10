@@ -150,28 +150,7 @@ Time Elapsed 00:00:01.66
 <NoWarn>$(NoWarn),1573,1591,1712</NoWarn>
 ```
 
-FileCabinetApp.csproj должен выглядеть следующим образом (примерно):
-
-```csproj
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <CodeAnalysisRuleSet>code-analysis.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
-    <NoWarn>$(NoWarn),1573,1591,1712</NoWarn>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-</Project>
-```
+Файл проекта должен выглядеть следующим образом (примерно) - [FileCabinetApp.csproj](https://github.com/epam-dotnet-lab/file-cabinet-task-example/blob/master/FileCabinetApp/FileCabinetApp.csproj)
 
 10. Снова соберите проект.
 

@@ -44,7 +44,7 @@ Commit "Implement CreateRecord for FileCabinetFilesystemService".
 
 Commit "Implement GetRecords for FileCabinetFilesystemService".
 
-5. Реализуйте метод FileCabinetFileService.GetStat, который должен возвращать статистику записей.
+5. Реализуйте метод FileCabinetFileService.GetStat, который должен возвращать количество записей, сохраненных в файле.
 
 Commit "Implement GetStat for FileCabinetFilesystemService".
 

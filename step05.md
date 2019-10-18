@@ -213,3 +213,5 @@ var dob = ReadInput(dateConverter, dateOfBirthValidator);
 ```
 
 Измените функциональность валидации входных данных таким образом, чтобы применение правил валидации зависело от параметра validation-rules.
+
+Commit "Refactor user input validation."

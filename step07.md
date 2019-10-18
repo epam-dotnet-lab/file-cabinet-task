@@ -4,8 +4,6 @@
 
 Цель: добавление файловой системы в качестве хранилища данных.
 
-Все изменения (commits) должны храниться в ветке _step7-add-filesystem_, а после окончания работы должны быть слиты в ветку _master_ с помощью *squash* merge.
-
 
 ### Задание
 
@@ -46,7 +44,7 @@ Commit "Implement CreateRecord for FileCabinetFilesystemService".
 
 Commit "Implement GetRecords for FileCabinetFilesystemService".
 
-5. Реализуйте метод FileCabinetFileService.GetStat, который должен возвращать все доступные записи из файла данных. Метод должен установить указатель на начало файла (BOF) и последовательно считывать записи.
+5. Реализуйте метод FileCabinetFileService.GetStat, который должен возвращать статистику записей.
 
 Commit "Implement GetStat for FileCabinetFilesystemService".
 

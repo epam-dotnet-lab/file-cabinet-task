@@ -7,21 +7,6 @@
 Все изменения (commits) должны храниться в ветке _step2-add-service_, а после окончания работы должны быть слиты в ветку _master_.
 
 
-### Материалы
-
-Проработайте дополнительные материалы, чтобы получить недостающие знания и умения.
-
-* Устройство [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array)
-* Устройство [List<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)
-* [DateTime.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parse)
-* [DateTime.TryParse](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparse)
-* [CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo)
-* [DateTimeFormatInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo)
-* [Tuple](https://docs.microsoft.com/en-us/dotnet/api/system.tuple)
-* [Action](https://docs.microsoft.com/en-us/dotnet/api/system.action)
-* [readonly vs static readonly vs const](https://stackoverflow.com/questions/755685/static-readonly-vs-const)
-
-
 ### Выполнение
 
 1. Создайте новую ветку _step2-add-service_ от ветки _master_.
@@ -298,6 +283,21 @@ d08f69f Fix unnecessary zero-length array allocation in FileCabinetService.cs.
 ### Проверка
 
 * Проверьте работоспособность приложения - команд create, list и stat.
+
+
+### Дополнительные материалы
+
+Проработайте дополнительные материалы, чтобы получить недостающие знания и умения.
+
+* Устройство [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array)
+* Устройство [List<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)
+* [DateTime.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parse)
+* [DateTime.TryParse](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparse)
+* [CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo)
+* [DateTimeFormatInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo)
+* [Tuple](https://docs.microsoft.com/en-us/dotnet/api/system.tuple)
+* [Action](https://docs.microsoft.com/en-us/dotnet/api/system.action)
+* [readonly vs static readonly vs const](https://stackoverflow.com/questions/755685/static-readonly-vs-const)
 
 
 ### Проверочные вопросы

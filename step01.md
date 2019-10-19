@@ -6,9 +6,6 @@
 
 Все изменения (commits) должны храниться в ветке _step1-add-file-cabinet-app_, а после окончания работы должны быть слиты в ветку _master_.
 
-
-### Материалы
-
 Перед выполнением задания проверьте, что Вы:
 * Умеете создавать консольные приложения .NET Core.
 * Умеете работать к консольным приложением _dotnet_.
@@ -17,13 +14,6 @@
 * Знаете, для чего нужен статический анализатор кода.
 
 Проработайте дополнительные материалы, чтобы получить недостающие знания и умения.
-
-* [Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки](https://docs.microsoft.com/ru-ru/dotnet/core/tutorials/using-with-xplat-cli)
-* [Get started with C# and Visual Studio Code](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code)
-* [Git за полчаса: руководство для начинающих](https://proglib.io/p/git-for-half-an-hour/)
-* [Статический анализ кода](https://www.viva64.com/ru/t/0046/)
-* [Stylecop против FXcop](http://qaru.site/questions/65163/stylecop-vs-fxcop)
-* [StyleCop: A Detailed Guide to Starting and Using It](https://blog.submain.com/stylecop-detailed-guide/)
 
 
 ### Выполнение
@@ -316,3 +306,13 @@ $ git log --oneline
 ```
 
 * Репозиторий должен выглядеть как образец - [file-cabinet-task-example](https://github.com/epam-dotnet-lab/file-cabinet-task-example).
+
+
+### Дополнительные материалы
+
+* [Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки](https://docs.microsoft.com/ru-ru/dotnet/core/tutorials/using-with-xplat-cli)
+* [Get started with C# and Visual Studio Code](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code)
+* [Git за полчаса: руководство для начинающих](https://proglib.io/p/git-for-half-an-hour/)
+* [Статический анализ кода](https://www.viva64.com/ru/t/0046/)
+* [Stylecop против FXcop](http://qaru.site/questions/65163/stylecop-vs-fxcop)
+* [StyleCop: A Detailed Guide to Starting and Using It](https://blog.submain.com/stylecop-detailed-guide/)

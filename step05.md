@@ -6,19 +6,16 @@
 
 Все изменения (commits) должны храниться в ветке _step5-refactoring_, а после окончания работы должны быть слиты в ветку _master_ с помощью *squash* merge (все комментарии ветки должны быть слиты вместе).
 
-### Материалы
-
-Проработайте дополнительные материалы, чтобы получить недостающие знания и умения.
-
-* [Соглашения о написании кода на C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
-* [Do good code: 8 правил хорошего кода](https://habr.com/ru/company/geekbrains/blog/270001/)
-* [Writing High Quality Code in C#](https://www.slideshare.net/nakov/writing-high-quality-code-in-c)
-* [C# Coding Guidelines](https://csharpcodingguidelines.com/), [Рекомендации по написанию кода на C# от Aviva Solutions](https://habr.com/ru/post/272053/)
-* [Качество кода: именование переменных, чистый код, code review - Основы программирования](https://www.youtube.com/watch?v=3lBZP27pxfA)
-* [DI vs. DIP vs. IoC](http://sergeyteplyakov.blogspot.com/2014/11/di-vs-dip-vs-ioc.html)
-
 
 ### Выполнение
+
+#### Изучите свой инструментарий
+
+Выясните, какие виды рефакторинга поддерживает Ваш инструмент:
+* Visual Studio - [Refactor code](https://docs.microsoft.com/en-us/visualstudio/ide/refactoring-in-visual-studio), [Quick Actions](https://docs.microsoft.com/en-us/visualstudio/ide/quick-actions).
+* Visual Studio Code - [Refactoring](https://code.visualstudio.com/docs/editor/refactoring).
+* Rider - [Refactoring and Cleaning Code](https://www.jetbrains.com/help/rider/Refactoring_and_Cleaning_Code.html).
+
 
 #### Качество кода
 
@@ -215,3 +212,15 @@ var dob = ReadInput(dateConverter, dateOfBirthValidator);
 Измените функциональность валидации входных данных таким образом, чтобы применение правил валидации зависело от параметра validation-rules.
 
 Commit "Refactor user input validation."
+
+
+### Дополнительные материалы
+
+Проработайте дополнительные материалы, чтобы получить недостающие знания и умения.
+
+* [Соглашения о написании кода на C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
+* [Do good code: 8 правил хорошего кода](https://habr.com/ru/company/geekbrains/blog/270001/)
+* [Writing High Quality Code in C#](https://www.slideshare.net/nakov/writing-high-quality-code-in-c)
+* [C# Coding Guidelines](https://csharpcodingguidelines.com/), [Рекомендации по написанию кода на C# от Aviva Solutions](https://habr.com/ru/post/272053/)
+* [Качество кода: именование переменных, чистый код, code review - Основы программирования](https://www.youtube.com/watch?v=3lBZP27pxfA)
+* [DI vs. DIP vs. IoC](http://sergeyteplyakov.blogspot.com/2014/11/di-vs-dip-vs-ioc.html)

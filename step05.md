@@ -9,6 +9,14 @@
 
 ### Выполнение
 
+#### Изучите свой инструментарий
+
+Выясните, какие виды рефакторинга поддерживает Ваш инструмент:
+* Visual Studio - [Refactor code](https://docs.microsoft.com/en-us/visualstudio/ide/refactoring-in-visual-studio), [Quick Actions](https://docs.microsoft.com/en-us/visualstudio/ide/quick-actions).
+* Visual Studio Code - [Refactoring](https://code.visualstudio.com/docs/editor/refactoring).
+* Rider - [Refactoring and Cleaning Code](https://www.jetbrains.com/help/rider/Refactoring_and_Cleaning_Code.html).
+
+
 #### Качество кода
 
 Просмотрите код проекта, найдите в нем слабые места, используя _Writing High Quality Code in C#_ в качестве справочника.

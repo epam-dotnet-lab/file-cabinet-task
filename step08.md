@@ -4,19 +4,10 @@
 
 Цель: реализовать импорт данных из файлов формата CSV и XML.
 
-Изменения каждого шага (нумерованного абзаца) должны находиться в отдельном коммите, который должен иметь понятное и ясное описание.
+Изменения для каждого нумерованного абзаца должны находиться в отдельном коммите с ясным и понятным описанием.
 
 
-### Материалы
-
-* [Introducing XML Serialization](https://docs.microsoft.com/en-us/dotnet/standard/serialization/introducing-xml-serialization)
-* [How to: Serialize an Object](https://docs.microsoft.com/en-us/dotnet/standard/serialization/how-to-serialize-an-object)
-* [How to: Qualify XML Element and XML Attribute Names](https://docs.microsoft.com/en-us/dotnet/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names)
-* [Examples of XML Serialization](https://docs.microsoft.com/en-us/dotnet/standard/serialization/examples-of-xml-serialization)
-* [XmlSerializer](https://docs.microsoft.com/en-us/dotnet/api/system.xml.serialization.xmlserializer)
-
-
-### Задание
+### Задания
 
 #### Генератор данных
 
@@ -89,3 +80,12 @@ Import error: file d:\data\records.csv is not exist.
 ```
 
 2. Реализуйте импорт данных для _FileCabinetMemoryService_ и _FileCabinetFilesystemService_.
+
+
+### Дополнительные материалы
+
+* [Introducing XML Serialization](https://docs.microsoft.com/en-us/dotnet/standard/serialization/introducing-xml-serialization)
+* [How to: Serialize an Object](https://docs.microsoft.com/en-us/dotnet/standard/serialization/how-to-serialize-an-object)
+* [How to: Qualify XML Element and XML Attribute Names](https://docs.microsoft.com/en-us/dotnet/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names)
+* [Examples of XML Serialization](https://docs.microsoft.com/en-us/dotnet/standard/serialization/examples-of-xml-serialization)
+* [XmlSerializer](https://docs.microsoft.com/en-us/dotnet/api/system.xml.serialization.xmlserializer)

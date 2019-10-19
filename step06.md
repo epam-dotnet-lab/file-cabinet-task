@@ -4,21 +4,12 @@
 
 Цель: добавление возможностей экспорта данных приложения в файлы CSV и XML.
 
+Название ветки и метод слияния указан в таблице в разделе [Ветвление](readme.md#ветвление).
 
-### Материалы
-
-* [Что такое XML](https://javarush.ru/groups/posts/2287-chto-takoe-xml)
-* [CSV](https://dic.academic.ru/dic.nsf/ruwiki/57030)
-* [Serialization](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/)
-* [FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream)
-* [TextWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.textwriter)
-* [StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter)
-* [StringWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.stringwriter)
-* [XmlDocument](https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlwriter)
-* [XmlWriter](https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlwriter)
+В этом шаге Вам вместо последовательности действий предоставляются задания для выполнения. Каждое задание должно быть оформлено *в отдельном коммите*, который должен иметь ясное и понятное описание изменений.
 
 
-### Задание
+### Задания
 
 #### Экспорт в CSV
 
@@ -78,3 +69,16 @@ Commit "Add export of file cabinet records to CSV file."
 ```
 
 Commit "Add export of file cabinet records to XML file."
+
+
+### Дополнительные материалы
+
+* [Что такое XML](https://javarush.ru/groups/posts/2287-chto-takoe-xml)
+* [CSV](https://dic.academic.ru/dic.nsf/ruwiki/57030)
+* [Serialization](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/)
+* [FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream)
+* [TextWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.textwriter)
+* [StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter)
+* [StringWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.stringwriter)
+* [XmlDocument](https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlwriter)
+* [XmlWriter](https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlwriter)

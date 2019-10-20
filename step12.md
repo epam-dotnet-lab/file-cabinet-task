@@ -25,7 +25,7 @@
 
 #### Применение IEnumerable и IEnumerator
 
-В BCL есть специализированные интерфейсы, которые применяются для реализации итераторов - [IEnumerable<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable) и [IEnumerator<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator).
+В BCL есть специализированные интерфейсы, которые применяются для реализации итераторов - [IEnumerable&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable) и [IEnumerator&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator).
 
 Измените код с применением этих интерфейсов:
 
@@ -47,5 +47,5 @@
 ### Проверочные вопросы
 
 * Для чего применяется шаблон Iterator?
-* Какое назначение у интерфейсов IEnumerable и IEnumerator (IEnumerable<T> и IEnumerator<T>)?
+* Какое назначение у интерфейсов IEnumerable и IEnumerator (IEnumerable&lt;T&gt; и IEnumerator&lt;T&gt;)?
 * В каких случаях и для чего применяется yield?

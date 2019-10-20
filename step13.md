@@ -94,7 +94,7 @@ The most similar commands are
 ```
 
 ```sh
-git sowh
+$ git sowh
 git: 'sowh' is not a git command. See 'git --help'.
 
 The most similar command is

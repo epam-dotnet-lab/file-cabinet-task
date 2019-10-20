@@ -25,7 +25,7 @@
 
 #### Применение IEnumerable и IEnumerator
 
-В BCL есть специализированные интерфейсы, которые применяются для реализации итераторов - [IEnumerable&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable) и [IEnumerator&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator).
+В BCL есть специализированные интерфейсы, которые применяются для реализации итераторов - [IEnumerable&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1) и [IEnumerator&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1).
 
 Измените код с применением этих интерфейсов:
 

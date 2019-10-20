@@ -77,3 +77,26 @@ Records #2, #3, #4 are deleted.
 #### Удаление команд
 
 Удалите поддержку команд list, find, edit, update и delete. Удалите код, который нигде не используется.
+
+
+#### Подсказка "похожие команды"
+
+Измените код, отвечающий за обработку пользовательских команд, таким образом, чтобы приложение выдавала пользователю подсказку в том случае, если пользователь ошибся при вводе команды. В качестве примера можно посмотреть на работу git:
+
+```sh
+$ git sta
+git: 'sta' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+```
+
+```sh
+git sowh
+git: 'sowh' is not a git command. See 'git --help'.
+
+The most similar command is
+        show
+```

@@ -42,6 +42,7 @@ Visual Studio 2019 - это наиболее удобный инструмент
 14. [Кэширование](step14.md)
 15. [Рефакторинг](step15.md)
 
+
 ## Ветвление
 
 В задании используется упрощенная модель ветвления [feature-branch workflow](https://bitworks.software/2018-12-10-git-feature-branch-workflow.html):

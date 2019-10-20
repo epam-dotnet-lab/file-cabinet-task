@@ -48,7 +48,7 @@ if (fileStream != null)
 
 ```cs
 if (o.Validation.Equals("custom", StringComparison.CurrentCultureIgnoreCase))
-```cs
+```
 
 Используйте константу:
 

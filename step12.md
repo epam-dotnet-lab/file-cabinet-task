@@ -39,9 +39,9 @@
 
 ### Дополнительные материалы
 
-[Iterators (C#)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/iterators)
-[Iterator Pattern C#](https://kudchikarsk.com/iterator-pattern-csharp/)
-[В чем польза yield?](https://ru.stackoverflow.com/questions/505018/%d0%92-%d1%87%d0%b5%d0%bc-%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%b0-yield/505073)
+* [Iterators (C#)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/iterators)
+* [Iterator Pattern C#](https://kudchikarsk.com/iterator-pattern-csharp/)
+* [В чем польза yield?](https://ru.stackoverflow.com/questions/505018/%d0%92-%d1%87%d0%b5%d0%bc-%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%b0-yield/505073)
 
 
 ### Проверочные вопросы

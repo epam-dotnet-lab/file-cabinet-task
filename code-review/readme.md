@@ -232,3 +232,117 @@ public interface IValidator {
     void ValidateParameters(ValidateParametersData data);
 }
 ```
+
+
+### Fail Fast
+
+Всегда добавляйте [guard clause](https://deviq.com/guard-clause/), чтобы проверить входные параметры и предотвратить NullReferenceException в неожиданных местах.
+
+Код без guard clause:
+
+```cs
+public FileCabinetFileSystemService(FileStream fileStream, IRecordValidator validator)
+{
+    this.fileStream = fileStream;
+    this.validator = validator;
+}
+```
+
+Код с guard clause:
+
+```cs
+public FileCabinetFileSystemService(FileStream fileStream, IRecordValidator validator)
+{
+    this.fileStream = fileStream ?? throw new ArgumentNullException(nameof(fileStream));
+    this.validator = validator ?? throw new ArgumentNullException(nameof(validator));
+}
+```
+
+См. [практики defensive programming](https://enterprisecraftsmanship.com/posts/defensive-programming/) и принцип [Fail Fast](https://enterprisecraftsmanship.com/posts/fail-fast-principle/).
+
+
+### Сравнение строк
+
+Вместо:
+
+```cs
+record.FirstName.ToUpper(CultureInfo.InvariantCulture) == r.FirstName.ToUpper(CultureInfo.InvariantCulture)
+```
+
+Используйте:
+
+```cs
+record.FirstName.Equals(r.FirstName, StringComparison.InvariantCultureIgnoreCase)
+```
+
+
+### Extract Variable
+
+Применяйте Extract Variable, если у вас вычисление встречается несколько раз:
+
+```cs
+if (!dictionary.ContainsKey(key.ToUpper(CultureInfo.InvariantCulture)))
+{
+    dictionary.Add(key.ToUpper(CultureInfo.InvariantCulture), new List<FileCabinetRecord>());
+}
+dictionary[key.ToUpper(CultureInfo.InvariantCulture)].Add(record);
+```
+
+Нужно:
+
+```cs
+```cs
+var keyStr = key.ToUpper(CultureInfo.InvariantCulture);
+if (!dictionary.ContainsKey(keyStr))
+{
+    dictionary.Add(keyStr, new List<FileCabinetRecord>());
+}
+dictionary[keyStr].Add(record);
+```
+
+### using
+
+```cs
+var csvWriter = new FileCabinetRecordCsvWriter(writer);
+using (writer)
+{
+    ...
+}
+```
+
+Нужно:
+
+```cs
+using (var csvWriter = new FileCabinetRecordCsvWriter(writer))
+{
+    ...
+}
+```
+
+С использованием [using declaration](https://csharp.christiannagel.com/2019/04/09/using/):
+
+```cs
+using var csvWriter = new FileCabinetRecordCsvWriter(writer);
+```
+
+
+### Environment.NewLine
+
+На разных системах "новая строка" может обозначаться разными символами (или группой символов).
+
+Вместо:
+
+```cs
+string.Join("\n", this.errors);
+```
+
+Нужно:
+
+```cs
+string.Join(Environment.NewLine, this.errors);
+```
+
+
+### Usused namespaces
+
+Удаляйте пространства имен, которые не используются в текущем исходном файле.

@@ -164,3 +164,53 @@ private static IFileCabinetService CreateService(ServiceType serviceType)
 	}
 }
 ```
+
+
+### Пример 2
+
+Исходный код:
+
+```cs
+foreach (var deserializedRecord in deserializedRecords.Records)
+{
+    var record = new FileCabinetRecord()
+    {
+        Id = deserializedRecord.Id,
+        FirstName = deserializedRecord.FullName.FirstName,
+        LastName = deserializedRecord.FullName.LastName,
+        DateOfBirth = DateTime.ParseExact(deserializedRecord.DateOfBirthString, "yyyy-MM-dd", null),
+        Gender = deserializedRecord.Gender,
+        Salary = deserializedRecord.Salary,
+        BonusPoints = deserializedRecord.BonusPoints,
+    };
+
+    records.Add(record);
+}
+```
+
+1. [Extract Method](https://refactoring.guru/ru/extract-method)
+
+```cs
+foreach (var deserializedRecord in deserializedRecords.Records)
+{
+    var record = CreateRecord(deserializedRecord);
+    records.Add(record);
+}
+
+private static FileCabinetRecord CreateRecord(Record record)
+{
+	return new FileCabinetRecord()
+    {
+        Id = deserializedRecord.Id,
+        FirstName = deserializedRecord.FullName.FirstName,
+        LastName = deserializedRecord.FullName.LastName,
+        DateOfBirth = DateTime.ParseExact(deserializedRecord.DateOfBirthString, "yyyy-MM-dd", null)
+    };
+}
+```
+
+2. Linq: Select
+
+```cs
+records.AddRange(deserializedRecords.Records.Select(CreateRecord));
+```

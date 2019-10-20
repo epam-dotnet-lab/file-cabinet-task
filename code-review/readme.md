@@ -186,13 +186,13 @@ public void ValidateParameters(Tuple<string, string, DateTime, short, decimal, c
 
 _The .NET Framework already has generic Tuple classes. These classes, however, had two major limitations. For one, the Tuple classes named their properties Item1, Item2, and so on. Those names carry no semantic information. Using these Tuple types does not enable communicating the meaning of each of the properties. The new language features enable you to declare and use semantically meaningful names for the elements in a tuple._
 
-2. Кортеж Tuple<T> работает как reference type. Если происходит работа с большим количеством кортежей, то создается большое количесво небольших объектов.
+2. Кортеж Tuple<T> работает как reference type. Если происходит работа с большим количеством кортежей, то создается большое количество небольших объектов.
 
 _The Tuple classes cause more performance concerns because they are reference types. Using one of the Tuple types means allocating objects. On hot paths, allocating many small objects can have a measurable impact on your application's performance._
 
-При использовании анонимных кортежей C# 7.0 используется структура [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-1), которая работает как value type.
+При использовании кортежей C# 7.0 используется структура [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-1), которая работает как value type.
 
-Пример кортежа в сигнатуре метода:
+Пример такого кортежа в сигнатуре метода:
 
 ```cs
 public void ValidateParameters((string fName, string lName, DateTime dob) data);

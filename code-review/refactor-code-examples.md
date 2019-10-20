@@ -214,3 +214,54 @@ private static FileCabinetRecord CreateRecord(Record record)
 ```cs
 records.AddRange(deserializedRecords.Records.Select(CreateRecord));
 ```
+
+
+### Пример 3
+
+Исходный код:
+
+```cs
+long position = this.GetFileRecordPosition(reader, fileCabinetRecord.Id) ?? throw new NullReferenceException($"No record with {fileCabinetRecord.Id} id");
+
+private long? GetFileRecordPosition(BinaryReader reader, int recordId)
+{
+	// ...
+
+    return null;
+}
+```
+
+Задачей этого метода является последовательный поиск в файле данных записи с указанным ID и возврат позиции в потоке на эту запись. Если запись не найдена, то возвращается null. Данный метод плохо спроектирован, методом пользоваться неудобно и легко совершить ошибку. Использование NullReferenceException совершенно не к месту.
+
+Проблема кода: возвращаемое значение состоит из двух смысловых частей - long содержит позицию, а nullable значение говорит о том, что запись не найдена.
+
+1. Разделение смысловых частей - long? -> bool (true - запись найдета, false - не найдена) + long.
+
+```cs
+private bool GetFileRecordPosition(BinaryReader reader, int recordId, out long)
+{
+	// ...
+
+    return null;
+}
+```
+
+3. Идиома Try - см. в качестве примера [TryGetValue](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2.trygetvalue)
+
+```cs
+private bool TryGetFileRecordPosition(BinaryReader reader, int recordId, out long)
+{
+	// ...
+
+    return null;
+}
+```
+
+Теперь метод следует общим правилам BCL. Также стоит добавить новый класс исключения.
+
+```cs
+long position;
+if (!this.TryGetFileRecordPosition(reader, fileCabinetRecord.Id, out position)) {
+    throw new FileRecordNotFound(fileCabinetRecord.Id);
+}
+```

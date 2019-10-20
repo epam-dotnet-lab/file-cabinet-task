@@ -291,7 +291,6 @@ dictionary[key.ToUpper(CultureInfo.InvariantCulture)].Add(record);
 Нужно:
 
 ```cs
-```cs
 var keyStr = key.ToUpper(CultureInfo.InvariantCulture);
 if (!dictionary.ContainsKey(keyStr))
 {
@@ -301,6 +300,8 @@ dictionary[keyStr].Add(record);
 ```
 
 ### using
+
+using должен комбинироваться с объявлением переменной. Вместо:
 
 ```cs
 var csvWriter = new FileCabinetRecordCsvWriter(writer);
@@ -325,6 +326,18 @@ using (var csvWriter = new FileCabinetRecordCsvWriter(writer))
 using var csvWriter = new FileCabinetRecordCsvWriter(writer);
 ```
 
+Работа со всем классами, которые реализуют IDispose, должна идти через using. Вместо:
+
+```cs
+BinaryReader reader = new BinaryReader(this.fileStream);
+```
+
+Нужно:
+
+```cs
+using BinaryReader reader = new BinaryReader(this.fileStream);
+```
+
 
 ### Environment.NewLine
 
@@ -343,6 +356,40 @@ string.Join(Environment.NewLine, this.errors);
 ```
 
 
-### Usused namespaces
+### Unused namespaces
 
 Удаляйте пространства имен, которые не используются в текущем исходном файле.
+
+
+### static readonly
+
+Используйте static readonly поля для типов, которые нельзя сделать константами:
+
+```cs
+if (DateTime.Compare(DateTime.Now, value) < 0 || DateTime.Compare(new DateTime(1900, 1, 1), value) > 0)
+```
+
+Нужно:
+
+```cs
+private static readonly DateTime MinDate = new DateTime(1900, 1, 1);
+
+...
+
+if (DateTime.Compare(DateTime.Now, value) < 0 || DateTime.Compare(MinDate, value) > 0)
+```
+
+
+### string.IsNullOrEmpty
+
+Вместо:
+
+```cs
+if (firstName.Trim() == string.Empty) { }
+```
+
+Нужно:
+
+```cs
+if (string.IsNullOrEmpty(firstName)) { }
+```

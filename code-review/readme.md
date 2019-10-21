@@ -82,8 +82,8 @@ catch (FormatException e)
 
  if (!parsed)
  {
-	Console.WriteLine("Invalid id.");
-	return;
+    Console.WriteLine("Invalid id.");
+    return;
  }
 ```
 
@@ -110,7 +110,7 @@ public override string ToString()
 ```cs
  public override string ToString()
 {
-	var builder = new StringBuilder();
+    var builder = new StringBuilder();
     builder.Append($"{this.Id}, ");
     builder.Append($"{this.FirstName}, ");
     builder.Append($"{this.LastName}, ");

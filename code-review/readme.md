@@ -78,7 +78,13 @@ catch (FormatException e)
 Нужно:
 
 ```cs
-TODO
+ var parsed = int.TryParse(parameters, out int id);
+
+ if (!parsed)
+ {
+  Console.WriteLine("Invalid id.");
+  return;
+ }
 ```
 
 
@@ -102,7 +108,18 @@ public override string ToString()
 Нужно:
 
 ```cs
-TODO
+ public override string ToString()
+        {
+            var builder = new StringBuilder();
+            builder.Append($"{this.Id}, ");
+            builder.Append($"{this.FirstName}, ");
+            builder.Append($"{this.LastName}, ");
+            builder.Append($"{this.DateOfBirth.ToString("yyyy-MMM-dd", CultureInfo.InvariantCulture)}, ");
+            builder.Append($"{this.WorkPlaceNumber}, ");
+            builder.Append($"{this.Salary}, ");
+            builder.Append($"{this.Department}");
+            return builder.ToString();
+        }
 ```
 
 

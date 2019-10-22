@@ -408,5 +408,5 @@ if (firstName.Trim() == string.Empty) { }
 Нужно:
 
 ```cs
-if (string.IsNullOrEmpty(firstName)) { }
+if (string.IsNullOrWhiteSpace(firstName)) { }
 ```

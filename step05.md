@@ -19,7 +19,7 @@
 
 #### Качество кода
 
-Просмотрите код проекта, найдите в нем слабые места, используя _Writing High Quality Code in C#_ в качестве справочника.
+Просмотрите код проекта, найдите в нем слабые места, используя [Writing High Quality Code in C#](https://www.slideshare.net/nakov/writing-high-quality-code-in-c) в качестве справочника.
 
 Обратите внимание на:
 
@@ -220,7 +220,6 @@ Commit "Refactor user input validation."
 
 * [Соглашения о написании кода на C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
 * [Do good code: 8 правил хорошего кода](https://habr.com/ru/company/geekbrains/blog/270001/)
-* [Writing High Quality Code in C#](https://www.slideshare.net/nakov/writing-high-quality-code-in-c)
 * [C# Coding Guidelines](https://csharpcodingguidelines.com/), [Рекомендации по написанию кода на C# от Aviva Solutions](https://habr.com/ru/post/272053/)
 * [Качество кода: именование переменных, чистый код, code review - Основы программирования](https://www.youtube.com/watch?v=3lBZP27pxfA)
 * [DI vs. DIP vs. IoC](http://sergeyteplyakov.blogspot.com/2014/11/di-vs-dip-vs-ioc.html)

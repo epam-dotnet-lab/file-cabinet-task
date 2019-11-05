@@ -18,12 +18,11 @@
 Пример использования команды:
 
 ```
-> select id, firstname, lastname where firstname = 'John' and firstname = 'Stan'
+> select id, firstname, lastname where firstname = 'John' and lastname = 'Doe'
 +----+-----------+----------+
 | Id | FirstName | LastName |
 +----+-----------+----------+
 |  1 | John      | Doe      |
-|  2 | Stan      | Smith    |
 +----+-----------+----------+
 > select lastname where firstname = 'John' or lastname = 'Smith'
 +----------+
@@ -76,7 +75,7 @@ Records #2, #3, #4 are deleted.
 
 #### Удаление команд
 
-Удалите поддержку команд list, find, edit, update и delete. Удалите код, который нигде не используется.
+Удалите поддержку команд list, find, edit и remove. Удалите код, который нигде не используется.
 
 
 #### Подсказка "похожие команды"

@@ -275,7 +275,7 @@ $ git merge step1-add-file-cabinet-app --ff
 $ git push
 ```
 
-24. Зайдите в настройки вашего репозитория, найдите раздел Collaborators (https://github.com/epam-lab/you-repository/settings/collaboration) и добавьте epam-lab в список.
+24. Зайдите в настройки вашего репозитория, найдите раздел Collaborators (https://github.com/epam-lab/you-repository/settings/collaboration) и добавьте alexander-rykov в список.
 
 
 ### Проверка

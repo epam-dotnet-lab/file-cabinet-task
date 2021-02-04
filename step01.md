@@ -71,7 +71,7 @@ Build succeeded.
 Time Elapsed 00:00:02.46
 ```
 
-6. Прочтите [руководство по установке StyleCop](https://carlos.mendible.com/2017/08/24/net-core-code-analysis-and-stylecop/). Добавьте пакеты StyleCop.Analyzers и FxCopAnalyzers в проект FileCabinetApp.
+6. Прочтите [руководство по установке StyleCop](https://carlos.mendible.com/2017/08/24/net-core-code-analysis-and-stylecop/) ([копия страницы](https://web.archive.org/web/20190110011601/https://carlos.mendible.com/2017/08/24/net-core-code-analysis-and-stylecop/)). Добавьте пакеты StyleCop.Analyzers и FxCopAnalyzers в проект FileCabinetApp.
 
 ```sh
 $ dotnet add package StyleCop.Analyzers
